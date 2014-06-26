@@ -1,0 +1,93 @@
+{% extends "club.twig" %}
+{% block pageTitle %}Places / Club{% endblock %}
+{% block mainContent %}
+<article>
+    <a id="start" name="start"></a>
+    <div class="article-heading-container">
+        <h2 class="article-parent">Club</h2>
+        <h1 class="article-heading">Places we fly</h1>
+    </div>
+    <div id="map-canvas" />
+</article>
+{% endblock mainContent %}
+
+{% block mapScripts %}
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8wSJSGkjnodOgN6xsf9y95ljtj6K6da8&sensor=true">
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(56.888515, 24.212807),
+            mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.HYBRID]
+            },
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            styles: [{"featureType": "administrative", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "stylers": [{"visibility": "simplified"}]}, {"featureType": "road", "stylers": [{"visibility": "simplified"}]}, {"featureType": "water", "stylers": [{"visibility": "simplified"}]}, {"featureType": "transit", "stylers": [{"visibility": "simplified"}]}, {"featureType": "landscape", "stylers": [{"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"visibility": "off"}]}, {"featureType": "road.local", "stylers": [{"visibility": "on"}]}, {"featureType": "road.highway", "elementType": "geometry", "stylers": [{"visibility": "on"}]}, {"featureType": "road.arterial", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "stylers": [{"color": "#5f94ff"}, {"lightness": 26}, {"gamma": 5.86}]}, {}, {"featureType": "road.highway", "stylers": [{"weight": 0.6}, {"saturation": -85}, {"lightness": 61}]}, {"featureType": "road"}, {}, {"featureType": "landscape", "stylers": [{"hue": "#0066ff"}, {"saturation": 74}, {"lightness": 100}]}],
+            zoom: 7,
+            panControl: false,
+            streetViewControl: false,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE
+            }
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        setMarkers(map, places);
+    }
+    var places = [
+        ['Krustpils', 56.534850, 25.888548, 4],
+        ['Babite', 56.933478, 23.738151, 5],
+        ['Sabile', 57.048801, 22.572407, 3],
+        ['Jurkalne', 56.754423, 21.061070, 2],
+        ['Rumbula', 56.888515, 24.212807, 1]
+    ];
+
+    var infowindow =  new google.maps.InfoWindow({
+        content: '',
+        maxWidth: 400
+    });
+
+
+    function setMarkers(map, locations) {
+        var image = {
+            url: 'img/flag.png',
+            size: new google.maps.Size(27, 27),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 27)
+        };
+        var shape = {
+            coord: [0, 0, 0, 27, 27, 27, 27, 0],
+            type: 'poly'
+        };
+        for (var i = 0; i < locations.length; i++) {
+            var place = locations[i];
+            var myLatLng = new google.maps.LatLng(place[1], place[2]);
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: image,
+                shape: shape,
+                title: place[0],
+                zIndex: place[3]
+            });
+
+            // add an event listener for this marker
+            bindInfoWindow(marker, map, infowindow, '<h4>Jurkalne, Latvia</h4><p>Place description paraugies Latvijas kartē un tur, kaut kur vidū starp Ventspili un Liepāju, ieraudzīsi Jūrkalnes vārdu. Paveries vēl ciešāk šai kartē un pa labi un pa kreisi no Jūrkalnes saburtosi vēl dažus vietvārdus.</p><ul class="place-data"><li><a href="#" class="photos">Photos</a></li><li><a href="#" class="videos">Videos</a></li><li><a href="#" class="news">News</a></li></ul>');
+
+        }
+    }
+
+    function bindInfoWindow(marker, map, infowindow, html) {
+        google.maps.event.addListener(marker, 'mouseover', function () {
+            infowindow.setContent(html);
+            infowindow.open(map, marker);
+        });
+
+        google.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock %}

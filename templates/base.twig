@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>{% block pageTitle %}pageTitle{% endblock %} / Paragliding Club and School. Adrenalins.lv</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="humans.txt">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="fb:page_id" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:description" content=""/>
+        <meta property="og:title" content=""/>        
+
+        <link rel="stylesheet" href="css/adrenalins.style.css">
+        <link rel="stylesheet" href="//vjs.zencdn.net/4.4/video-js.css">
+        <link rel="stylesheet" href="css/bigvideo.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css">
+        <link rel="stylesheet" href="css/fullcalendar.css">
+        {% block autocompleteStyles %}{% endblock %}
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+        <meta name="msapplication-TileColor" content="#e04c40">
+        <meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+    </head>
+    <body>
+        <a name="cloudbase"  id="cloudbase"></a>
+        {% block slideContainer %}{% endblock slideContainer %}
+        <header>
+            <div class="clearfix">
+                <div class="left-narrow-column">
+                    <nav class="lang-menu">
+                        <ul>
+                            <li><a href="?page=main" class="current">LV</a></li>
+                            <li><a href="?page=main">RU</a></li>
+                            <li><a href="?page=main">EN</a></li>
+                        </ul>                
+                    </nav>
+                </div>
+                <div class="right-wide-column">
+                    <div class="top-line">
+                        <div class="search-block">
+                            <div class="about-adrenalins">Paragliding club and school</div>
+                            <a href="javascript:;" class="search-link"><span class="front animate">Search</span><span class="back animate">Hide search</span></a>
+                        </div>
+                        <div class="user-block"><i class="icon-note"></i>
+                            {% if(mod == 'pilot-login') %}
+                                <div class="user-menu-container"><a href="javascript:;" class="pilot-login-link">Pilot login</a></div>                                
+                                {% include 'include/pilot-login.twig' %}
+                            {% else %}
+                                <div class="user-menu-container"><a href="javascript:;" class="user-menu-link">Hi, Alexander Kalichava</a></div>
+                                <div class="miniforum"><a href="?page=news">Miniforum</a></div>
+                                {% include 'include/user-menu.twig' %}
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="left-narrow-column center">
+                        <div class="logo">
+                            <a href="?page=main">
+                                <img src="img/svg/adrenalins-logo.svg" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right-wide-column panel">
+                        <div class="front">
+                            <nav class="main-menu">
+                        {% block mainMenu %}
+                                    <ul>
+                                        <li class="home"><a href="?page=main">Home</a></li>
+                                        <li {% if(page == 'about') %}class="current"{% endif %}><a href="?page=about">About</a></li>
+                                        <li {% if(page == 'school') %}class="current"{% endif %}><a href="?page=school">School</a></li>
+                                        <li {% if(page == 'tandem') %}class="current"{% endif %}><a href="?page=tandem">Tandem Flying</a></li>
+                                        <li {% if(page == 'club') %}class="current"{% endif %}><a href="?page=club">Club</a></li>
+                                        <li {% if(page == 'media') %}class="current"{% endif %}><a href="?page=media">Media</a></li>
+                                        <li {% if(page == 'news') %}class="current"{% endif %}><a href="?page=news">News</a></li>
+                                        <li {% if(page == 'shop') %}class="current"{% endif %}><a href="?page=shop">Shop</a></li>
+                                        <!-- <li><a href="http://shop.adrenalins.lv">Shop</a></li> -->
+                                        <li {% if(page == 'paramotors') %}class="current"{% endif %}><a href="?page=paramotors">Paramotors</a></li>
+                                    </ul>
+                        {% endblock mainMenu %}
+                                </nav>
+                            </div>
+                            <div class="back">
+                                <form class="search-form" action="?page=search" method="post">
+                                    <input type="text" name="search-keyword" class="search-keyword" placeholder="Type keyword here" />
+                                    <div class="button"><input type="image" name="search-button" src="img/enter.png" /></div>
+                                </form>                        
+                            </div>
+                        </div>
+                    </div>
+                </header>
+        {% block slides %}{% endblock %}
+        {% block contentArea %}
+                {% block photogallery %}{% endblock %}
+                {% block video %}{% endblock %}
+                {% block comments %}{% endblock %}            
+        {% endblock %}
+                <footer>
+                    <div class="clearfix">
+                        <a href="https://www.facebook.com/adrenalinslv.paraplanierismaklubs"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12 3.303h-2.285c-.27 0-.572.355-.572.831v1.65h2.857v2.352h-2.857v7.064h-2.698v-7.063h-2.446v-2.353h2.446v-1.384c0-1.985 1.378-3.6 3.269-3.6h2.286v2.503z"/></svg></a>
+                        <a href="https://twitter.com/Adrenalins_lv"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15.36 3.434c-.542.241-1.124.402-1.735.476.624-.374 1.103-.966 1.328-1.67-.583.346-1.23.598-1.917.733-.551-.587-1.336-.954-2.205-.954-1.668 0-3.02 1.352-3.02 3.019 0 .237.026.467.078.688-2.51-.126-4.735-1.328-6.224-3.155-.261.446-.41.965-.41 1.518 0 1.048.534 1.972 1.344 2.514-.495-.016-.961-.151-1.368-.378v.038c0 1.463 1.042 2.683 2.422 2.962-.253.069-.52.106-.796.106-.194 0-.383-.018-.568-.054.384 1.2 1.5 2.073 2.821 2.097-1.034.81-2.335 1.293-3.75 1.293-.244 0-.484-.014-.72-.042 1.336.857 2.923 1.357 4.63 1.357 5.554 0 8.592-4.602 8.592-8.593l-.009-.39c.59-.426 1.102-.958 1.507-1.563z"/></svg></a>
+                        <a href="?page=contacts" class="white-link">Contacts</a>
+                        <a href="#cloudbase" class="search-link white-link"><span class="front animate">Search</span><span class="back animate">Hide search</span></a>
+                        <a href="http://www.kalichava.lv" class="white-link made-by-kalichava">Made by kalichava</a>
+                    </div>
+                    <div class="online add10t">
+                        Online<span class="badge animate">3</span>
+                        <a href="?page=club&sub=club-pilots#pilot-1">Mihails Vavilovs</a>, <a href="?page=club&sub=club-pilots#pilot-2">Dzintars Reiniks</a>, <a href="?page=club&sub=club-pilots#pilot-3">Krišjānis Sietiņš</a>
+                    </div>
+                    <!-- социальные ссылки, кнопки добавим на живом сайте    
+                     <div class="add5t center">
+                         <div class="fb-like" data-href="http://www.adrenalins.lv" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                     </div>
+                    -->
+                </footer>
+                <!-- FACEBOOK LIKE --><div id="fb-root"></div><!-- end FACEBOOK LIKE -->
+
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+                <script>window.jQuery || document.write('<script src="js/libs/jquery-2.1.0.min.js"><\/script>');</script>
+                {% block mainpageScripts %}{% endblock %}
+                <script src="js/libs/jquery.resizeimagetoparent.js"></script>
+                <script src="js/libs/jquery.mosaicflow.js"></script>                
+                <script src="js/libs/jquery.placeholdem.js"></script>
+                <script src="js/libs/jquery.sticky.js"></script>
+                <script src="js/libs/jquery.magnific-popup.min.js"></script>
+
+                <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+                <script src="js/calendar.js"></script>
+
+                <script src="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>
+                <script src="js/tooltips.js"></script>
+
+                <script src="js/main.js"></script>
+
+
+        {% block mapScripts %}{% endblock %}
+        {% block fileUploadScripts %}{% endblock %}
+        {% block wysiwygScripts %}{% endblock %}
+        {% block autocompleteScripts %}{% endblock %}
+        {% block errorScripts %}{% endblock %}
+                
+                
+
+            </body>
+        </html>

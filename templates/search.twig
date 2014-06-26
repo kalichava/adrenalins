@@ -1,0 +1,86 @@
+{% extends "base.twig" %}
+
+{% block pageTitle %}Search for "keyword" / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block contentArea %}
+<div class="content-area has-background">
+    <div class="only-column add30v">
+     {% block mainContent %}
+        <div class="article-heading-container">
+            <h2 class="article-parent">45 items found matching</h2>
+            <h1 class="article-heading">"keyword or keywords"</h1>                
+        </div>
+
+        <ul class="search-results">
+            <li>
+                <h3 class="title"><a href="?page=news">Starti no Grappa kalna</a></h3>
+                <div class="smaller lighter">News</div>
+                <div class="matching-string">
+                    &hellip;
+                    max 100 charecters lorem ipsum dolor sit amet, <span class="highlight">keyword</span> consectetur adipiscing elit. Sed id tincidunt lacus. Etiam erat augue, facilisis nec vulputate a, tincidunt id nisl. Morbi eu porta leo. Suspendisse pretium at lacus at fermentum.
+                    &hellip;                    
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=club&sub=club-rules">Правила полетов</a></h3>
+                <div class="smaller lighter">Club</div>
+                <div class="matching-string">
+                    &hellip;
+                    max 100 charecters quisque non felis nec eros condimentum <span class="highlight">keywords</span>. Duis vel arcu vestibulum, auctor felis sit amet, luctus magna. Nunc lacinia viverra rhoncus.
+                    &hellip;                    
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=news">Page with <span class="highlight">keyword</span></a></h3>
+                <div class="smaller lighter">News</div>
+                <div class="matching-string">
+                    Begining of the lead max 100 charecters lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tincidunt lacus. Etiam erat augue
+                    &hellip;                    
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=club&sub=club-pilots">Club pilots</a></h3>
+                <div class="smaller lighter">Club</div>
+                <div class="matching-string">
+                    Mihails Vavilovs. Превратил хобби в <span class="highlight">keyword</span>.
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=club&sub=club-calendar">13 January 2014. Brauciens uz <span class="highlight">keyword</span></a></h3>
+                <div class="smaller lighter">Club &larr; Club calendar</div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=club&sub=club-places">Jurkalne</a></h3>
+                <div class="smaller lighter">Club &larr; Places we fly</div>
+                <div class="matching-string">
+                    Jurkalne. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tincidunt lacus. Etiam erat <span class="highlight">keyword</span> augue, facilisis nec vulputate a.
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=media">Maslenica <span class="highlight">keyword</span> 2014</a></h3>
+                <div class="smaller lighter">Media &larr; Photo</div>
+                <div>98 photos</div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=media">Maslenica <span class="highlight">keyword</span> 2014</a></h3>
+                <div class="smaller lighter">Media &larr; Video</div>
+            </li>
+            <li>
+                <h3 class="title"><a href="?page=paramotors&sub=paramotors-faq">Вопросы и ответы</a></h3>
+                <div class="smaller lighter">Парамоторы</div>
+                <div class="matching-string">
+                    Uz jautājumu, vai ir vērts sākt nodarboties ar <span class="highlight">keyword</span>, vai tāds hobijs jums der, katrs varēs atbildēt pats pēc lidojuma tandēmā ar instruktoru Rumbulas lidlaukā. Tas ir vienkāršs planējošs lidojums. Pilotu un pasažieri uzvelk gaisā ar
+                    &hellip;
+                </div>
+            </li>
+        </ul>
+        <div class="button at-center add30t"><a href="#">Load next 20 results</a></div>
+{% endblock mainContent %}
+    </div>
+</div>
+{% endblock contentArea %}

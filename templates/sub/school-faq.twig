@@ -1,0 +1,13 @@
+{% extends "school.twig" %}
+
+{% block pageTitle %}FAQ / School{% endblock %}
+{% block mainContent %}
+<article>
+    <a id="start" name="start"></a>
+    <div class="article-heading-container">
+        <h2 class="article-parent">School</h2>
+        <h1 class="article-heading">Questions and answers</h1>        
+    </div>
+    {% include 'include/faq-container.twig' %}
+</article>
+{% endblock mainContent %}

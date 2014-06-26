@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block slides %}
+<div class="slides inner">
+    <div class="slide-tandem current">
+        <div class="text clearfix">
+            <div class="promo"><h2>Subscribe paramotor news!</h2></div>
+            <form method="post" action="#" class="promo-form">
+                <input type="text" name="email" maxlength="50" placeholder="E-pasta adrese" autofocus="autofocus">
+                <div class="clearfix capcha-container">
+                    <label for="capcha">2 + 7 =</label>
+                    <input type="text" id="capcha" name="capcha" maxlength="4" placeholder="" class="capcha">
+                </div>
+                <div class="button wide"><input type="submit" name="submit" value="Inform me" class="submit-form"></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock slides %}
+
+{% block contentArea %}
+<div class="content-area has-background">
+    <div class="left-narrow-column">
+        <div class="sticky">
+        {% block submenu %}
+            <nav class="submenu">
+                <ul>
+                {% if(sub == 'paramotors-about') %}
+                    <li class="current"><span>About the PPG</span></li>
+                    {% else %}
+                    <li><a href="?page=paramotors&sub=paramotors-about">About the PPG</a></li>
+                {% endif %}
+                {% if(sub == 'paramotors-programm') %}
+                    <li class="current"><span>Programm</span></li>
+                    {% else %}
+                    <li><a href="?page=paramotors&sub=paramotors-programm">Programm</a></li>
+                {% endif %}
+                {% if(sub == 'paramotors-faq') %}
+                    <li class="current"><span>Questions and answers</span></li>
+                    {% else %}
+                    <li><a href="?page=paramotors&sub=paramotors-faq">Questions and answers</a></li>
+                {% endif %}
+                {% if(sub == 'paramotors-media') %}
+                    <li class="current"><span>Media gallery</span></li>
+                    {% else %}
+                    <li><a href="?page=paramotors&sub=paramotors-media">Media gallery</a></li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% endblock submenu %}
+        {% block smsSystem %}
+            {% include 'include/section-sms-system.twig' %}
+        {% endblock smsSystem %}
+        </div>
+    </div>
+    <div class="right-wide-column add30v">
+    {% block mainContent %}{% endblock mainContent %}
+    </div>
+</div>
+{% endblock contentArea %}

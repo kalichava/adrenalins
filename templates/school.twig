@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+
+{% block slides %}
+<div class="slides inner">
+    <div class="slide-school current">
+        <div class="text clearfix">
+            <div class="promo"><h2>Ja jūs nolēmāt mācīties mūsu skolā, tad aizpildiet, lūdzu, anketu.</h2></div>
+            <form method="post" action="#" class="promo-form">
+                <input type="text" name="name" maxlength="50" autofocus="autofocus" placeholder="Vārds, Uzvārds" required="required" />
+                <input type="text" name="age" maxlength="2" placeholder="Vecums" class="one-half" required="required" />
+                <input type="text" name="phone" maxlength="15" placeholder="Tālruņa numurs" required="required" />
+                <input type="text" name="email" maxlength="50" placeholder="E-pasta adrese" required="required" />
+                <div class="clearfix capcha-container">
+                    <label for="capcha">22 + 77 =</label>
+                    <input type="text" id="capcha" name="capcha" maxlength="4" class="capcha" required="required" />
+                </div>
+                <div class="button wide"><input type="submit" name="submit" value="Send request" class="submit-form"></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock slides %}
+
+{% block contentArea %}
+<div class="content-area has-background">
+    <div class="left-narrow-column">
+        <div class="sticky">
+        {% block submenu %}
+            <nav class="submenu">
+                <ul>
+                {% if(sub == 'school-about') %}
+                    <li class="current"><span>About the school</span></li>
+                    {% else %}
+                    <li><a href="?page=school&sub=school-about">About the school</a></li>
+                {% endif %}
+                {% if(sub == 'school-programm') %}
+                    <li class="current"><span>Programm</span></li>
+                    {% else %}
+                    <li><a href="?page=school&sub=school-programm">Programm</a></li>
+                {% endif %}
+                {% if(sub == 'school-faq') %}
+                    <li class="current"><span>Questions and answers</span></li>
+                    {% else %}
+                    <li><a href="?page=school&sub=school-faq">Questions and answers</a></li>
+                {% endif %}
+                {% if(sub == 'school-media') %}
+                    <li class="current"><span>Media gallery</span></li>
+                    {% else %}
+                    <li><a href="?page=school&sub=school-media">Media gallery</a></li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% endblock submenu %}
+        {% block smsSystem %}
+            <section class="add30b">
+                <div><span class="section-heading">SMS System for students</span></div>
+                <div class="sms-system">
+                    <p>Norādiet savu SMS identifikatoru, ja jūs vēlaties saņemt SMS par to, kad un kur notiek paraplānu apmācība.</p>
+                    <form method="post" action="#">
+                        <input type="email" placeholder="Mans&nbsp;SMS&nbsp;identifikators" name="smsid">
+                        <div class="button wide"><input type="submit" value="Send"></div>
+                    </form>
+                    <p class="small">Vajag palidzibu? Kāds ir jūsu operators?</p>
+                    <div id="sms-tabs">
+                        <a href="#lmt">LMT</a>
+                        <a href="#tele2">TELE2</a>
+                        <a href="#bite">BITE</a>
+                    </div>
+                    <div id="lmt" class="sms-section"><p>Lai saņemtu SMS identifikatoru nosūti SMS tekstu ADRESE xxx uz numuru 29319915, kur xxx - tava identifikatora daļa (līdz @ zīmei)</p></div>
+                    <div id="tele2" class="sms-section"><p>Lai saņemtu SMS identifikatoru nosūti SMS tekstu "on" uz numuru 1612</p></div>
+                    <div id="bite" class="sms-section"><p>Jūsu SMS identifikators ir 371xxxxxxxx@biteplus.lv, kur 371xxxxxxxx ir Jūsu tālruņa numurs.</p></div>
+                </div>
+            </section>
+        {% endblock smsSystem %}
+        </div>
+    </div>
+    <div class="right-wide-column add30v">
+    {% block mainContent %}{% endblock mainContent %}
+    </div>
+</div>
+{% endblock contentArea %}

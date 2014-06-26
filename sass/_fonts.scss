@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans:400,300,600&subset=latin-ext,cyrillic);
+
+/* LINKS */
+
+a {text-decoration: none; color:$body-link-color;}
+p a:hover {border-bottom:1px solid rgba($body-link-color, 0.2);}
+
+a:focus {
+    outline: thin dotted;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+
+
+/* TYPECAST */
+
+body {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 1.62em;
+}
+
+blockquote {
+    margin: 1.618em 0 1.618em 2em;
+    border-left: 2px solid $body-link-color;
+    padding-left: 2em;
+    font-size:1.1em;
+    p {font-weight: inherit;}
+}
+p {
+    font-size: 1em;
+    line-height: 1.62em;
+    margin-bottom: .5em;
+}
+p.intro {
+    font-size:1.1em;
+    margin-bottom: 1em;
+
+}
+p.author {
+    font-size: 0.6875em;
+    line-height: 1em;
+    letter-spacing: 0.625em;
+    margin-bottom: 1.618em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $body-font-color;
+    text-rendering: optimizeLegibility;
+    font-weight: $font-weight-bold;
+    line-height: 1.3em;
+    margin: 1em 0px 0.3em 0px;
+    a {
+        color: $body-link-color;
+    }
+}
+
+h1,h2 {
+    font-family: $font-family-serif;
+    font-weight: $font-weight-regular;
+}
+h1 {
+    font-size: 3em;
+    line-height: 1.1em;
+    margin: 0px 0px 0.5em 0px;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin: 1em 0px 0.2em 0px;
+    .minor {
+        font-weight: $font-weight-regular;
+        color: rgba(0,0,0,.5);
+        font-size: .75em
+    }
+}
+
+h3 {
+    font-size: 1.62em;
+}
+h4 {
+    font-size: 1.4em;
+}
+h5 {
+    font-size: 1.3em;
+}
+h6 {
+    font-size: 1.2em;
+}
+ol, ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+
+}
+
+b, i, strong, em {
+    font-weight:$font-weight-bold;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote, q {
+    &:before, &:after {
+        content: '';
+        content: none; }
+}
+.lighter, a.lighter {
+    color:lighten($body-font-color, 20%);
+}
+.smaller {
+    font-size: em(14) !important; 
+    line-height:1.3em !important;
+}
+.small {
+    font-size: em(11) !important; 
+    line-height:1.3em !important;
+}
+.bigger {font-size: 1.2em !important;}
+.big {font-size: 1.4em !important;}
+
+.uppercase {text-transform: uppercase;}
+.highlight {
+    background:$primary-color;
+    color:#000;
+    padding-left:5px;
+    padding-right:5px;
+}

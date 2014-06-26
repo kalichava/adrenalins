@@ -1,0 +1,114 @@
+{% extends "base.twig" %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+
+{% block slides %}
+<div class="slides inner">
+    <div class="slide-tandem current">
+        <div class="text clearfix">
+            <div class="promo"><h2>Kādu informāciju jus velāties saņemt no kluba?</h2></div>
+
+            <div class="promo-form club">
+                <div class="forms-container clearfix">
+                    <div class="email-form">
+                    <!-- <div class="email-form error"> -->
+                        <form method="post" action="#" class="add40r">
+                            <input type="text" name="name" maxlength="50" placeholder="Vārds, Uzvārds" required="required" />
+                            <!-- <input type="text" name="name" maxlength="50" placeholder="Vārds, Uzvārds" required="required" class="has-error" /> -->
+                            <input type="text" name="email" maxlength="50" placeholder="E-pasta adrese" required="required" />
+                            <div class="clearfix capcha-container">
+                                <label for="capcha-email">2 + 7 =</label>
+                                <input type="text" id="capcha-email" name="capcha-email" maxlength="4" class="capcha" required="required" />
+                            </div>
+                            <div class="button wide"><input type="submit" name="submit" value="Get E-mails" class="submit-form"></div>
+                        </form>
+                        <a href="javascript:;" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.001 1c-6.075 0-11.001 4.925-11.001 11s4.926 11 11.001 11 10.999-4.925 10.999-11-4.924-11-10.999-11zm5.985 15.861c.311.311.311.815 0 1.126-.156.155-.359.232-.563.232s-.407-.077-.563-.232l-4.859-4.862-4.862 4.862c-.156.155-.358.232-.563.232-.203 0-.407-.077-.563-.232-.311-.311-.311-.815 0-1.126l4.862-4.861-4.861-4.86c-.311-.311-.311-.815 0-1.125.312-.311.814-.311 1.125 0l4.862 4.861 4.859-4.861c.312-.311.815-.311 1.126 0s.311.814 0 1.126l-4.861 4.859 4.861 4.861z"/></svg></a>
+                    </div>
+                    <div class="form-chooser">
+                        <div class="clearfix">
+                            <div class="one-half float-left center">
+                                <a href="javascript:;" class="email-form-link">
+                                    <svg class="form-chooser-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M85 22v47h-70v-47h70m1.75-7h-74c-2.761 0-4.75 2.239-4.75 5v51c0 2.762 1.989 5 4.75 5h74c2.762 0 5.25-2.238 5.25-5v-51c0-2.761-2.488-5-5.25-5z"/><path d="M57.672 80.125v.854c0 1.393-1.254 2.521-2.646 2.521h-10.303c-1.393 0-2.395-1.128-2.395-2.521v-.854h-42.328v2.875c0 2.762 1.989 5 4.75 5h90c2.762 0 5.25-2.238 5.25-5v-2.875h-42.328z"/><path d="M49.813 60.188c-.896 0-1.792-.342-2.475-1.025l-28.626-28.625c-1.367-1.367-1.367-3.583 0-4.95 1.367-1.366 3.583-1.366 4.95 0l26.15 26.15 26.15-26.15c1.367-1.366 3.582-1.366 4.949 0 1.367 1.367 1.367 3.583 0 4.95l-28.624 28.624c-.683.684-1.579 1.026-2.474 1.026z"/></svg>
+                                    <span>E-pastus par kluba aktualitātēm</span>
+                                </a>
+                            </div>
+                            <div class="one-half float-left center">
+                                <a href="javascript:;" class="sms-form-link">
+                                    <svg class="form-chooser-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M66 74h-31v-48h31v4h5v-11.095c0-1.992-1.146-3.905-3.138-3.905h-34.624c-1.992 0-3.238 1.913-3.238 3.905v64.921c0 1.991 1.246 4.174 3.238 4.174h34.625c1.991 0 3.137-2.183 3.137-4.174v-16.826h-5v7zm-10-53c0 .552-.447 1-1 1h-9c-.553 0-1-.448-1-1s.447-1 1-1h9c.553 0 1 .448 1 1zm-5.09 62.104c-1.593 0-2.885-1.293-2.885-2.886 0-1.594 1.292-2.886 2.885-2.886 1.594 0 2.886 1.292 2.886 2.886s-1.292 2.886-2.886 2.886z"/><path d="M71.649 32.61h-12.984c-7.968 0-14.427 6.459-14.427 14.427v2.164c0 7.725 6.075 14.012 13.705 14.391v6.528l8.121-6.492h5.585c7.968 0 14.427-6.459 14.427-14.427v-2.164c0-7.968-6.459-14.427-14.427-14.427zm-13.086 19.536c-.581.441-1.403.662-2.465.662-.557 0-1.139-.058-1.748-.172s-1.158-.322-1.648-.625c-.083-.049-.129-.104-.143-.166-.012-.061.007-.152.057-.275l.478-1.165c.058-.139.114-.217.172-.233.057-.016.146 0 .27.049l.472.159c.193.058.398.111.62.16.22.049.451.09.692.123.241.032.477.049.705.049.196 0 .352-.019.467-.055.114-.037.203-.082.27-.135.064-.053.107-.113.128-.178l.031-.171-.024-.196c-.016-.065-.056-.129-.116-.189-.062-.062-.158-.127-.288-.197-.131-.069-.308-.145-.528-.227-.425-.155-.82-.317-1.189-.485-.368-.167-.687-.357-.956-.57-.271-.212-.482-.456-.639-.729-.154-.274-.232-.595-.232-.963 0-.352.061-.688.178-1.012.119-.323.303-.607.552-.853.25-.245.57-.439.963-.582.394-.143.858-.215 1.398-.215.498 0 1.004.047 1.514.141.512.094.943.235 1.294.423.139.065.213.126.222.184.008.057-.021.171-.087.343l-.33 1.018c-.059.155-.113.245-.167.27-.053.025-.148.017-.288-.025-.351-.098-.712-.173-1.085-.227-.372-.053-.717-.08-1.035-.08-.287 0-.477.042-.57.123-.095.082-.142.18-.142.294l.03.153.123.172c.062.061.151.125.27.19.119.065.28.135.484.208.491.188.933.375 1.324.558.393.184.724.391.993.62.271.229.479.493.626.791.147.299.222.647.222 1.048-.004.883-.295 1.546-.875 1.987zm11.379.293c0 .115-.021.183-.063.203l-.221.03h-1.617l-.203-.03c-.046-.021-.067-.088-.067-.203v-4.07h-.074l-.626 1.397-.637 1.361c-.091.204-.182.346-.276.423-.094.078-.231.117-.41.117h-.821c-.205 0-.346-.039-.424-.117-.077-.077-.166-.219-.263-.423l-.553-1.104-.711-1.509h-.073v3.924c0 .115-.021.183-.062.203l-.208.03h-1.705l-.209-.03s-.073-.088-.073-.203v-7.382c0-.384.069-.642.208-.772.14-.131.364-.196.675-.196h.944c.262 0 .45.047.563.141.115.094.226.247.331.46l.982 2.035.956 2.012h.048l.957-1.987.981-2.023c.105-.213.226-.373.356-.479.13-.106.351-.159.661-.159h.761c.13 0 .249.01.355.03.105.021.198.062.276.123.078.062.137.151.177.27.042.119.063.272.063.459v7.469zm7.309-.293c-.581.441-1.402.662-2.465.662-.556 0-1.14-.058-1.747-.172-.61-.114-1.159-.322-1.65-.625-.082-.049-.129-.104-.141-.166-.013-.061.006-.152.056-.275l.478-1.165c.058-.139.115-.217.172-.233s.147 0 .27.049c.122.049.28.102.473.159.191.058.398.111.619.16s.452.09.692.123c.241.032.477.049.705.049.197 0 .353-.019.467-.055.113-.037.204-.082.27-.135l.128-.178.032-.171-.025-.196c-.017-.065-.056-.129-.116-.189-.062-.062-.158-.127-.288-.197-.131-.069-.308-.145-.527-.227-.426-.155-.822-.317-1.19-.485-.367-.167-.686-.357-.956-.57-.27-.212-.481-.456-.638-.729-.155-.274-.232-.595-.232-.963 0-.352.059-.688.178-1.012.118-.323.302-.607.552-.853.248-.245.57-.439.963-.582.392-.143.858-.215 1.398-.215.498 0 1.002.047 1.514.141.511.094.942.235 1.294.423.139.065.213.126.22.184.009.057-.021.171-.085.343l-.332 1.018c-.057.155-.111.245-.165.27-.053.025-.148.017-.288-.025-.352-.098-.713-.173-1.085-.227-.372-.053-.718-.08-1.036-.08-.287 0-.477.042-.571.123-.094.082-.14.18-.14.294l.03.153.123.172c.061.061.15.125.27.19.117.065.279.135.484.208.49.188.931.375 1.323.558.394.184.724.391.994.62.27.229.478.493.625.791.147.299.221.647.221 1.048-.004.883-.294 1.546-.874 1.987z"/></svg>
+                                    <span>SMS par kluba jaunumiem</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sms-form">
+                        <form method="post" action="#" class="add40r">
+                            <input type="text" name="name" maxlength="50" placeholder="Vārds, Uzvārds" required="required" />
+                            <input type="text" name="email" maxlength="50" placeholder="SMS identificator" required="required" />
+                            <div class="clearfix capcha-container">
+                                <label for="capcha-sms">2 + 7 =</label>
+                                <input type="text" id="capcha-sms" name="capcha-sms" maxlength="4" class="capcha" required="required" />
+                            </div>
+                            <div class="button wide"><input type="submit" name="submit" value="Get SMS" class="submit-form"></div>
+                        </form>
+                        <a href="javascript:;" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.001 1c-6.075 0-11.001 4.925-11.001 11s4.926 11 11.001 11 10.999-4.925 10.999-11-4.924-11-10.999-11zm5.985 15.861c.311.311.311.815 0 1.126-.156.155-.359.232-.563.232s-.407-.077-.563-.232l-4.859-4.862-4.862 4.862c-.156.155-.358.232-.563.232-.203 0-.407-.077-.563-.232-.311-.311-.311-.815 0-1.126l4.862-4.861-4.861-4.86c-.311-.311-.311-.815 0-1.125.312-.311.814-.311 1.125 0l4.862 4.861 4.859-4.861c.312-.311.815-.311 1.126 0s.311.814 0 1.126l-4.861 4.859 4.861 4.861z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock slides %}
+{% block contentArea %}
+<div class="content-area has-background">
+    <div class="left-narrow-column">
+        <div class="sticky" id="left-column">
+        {% block submenu %}
+            <nav class="submenu">
+                <ul>
+                {% if(sub == 'club-about') %}
+                    <li class="current"><span>О клубе "Adrenalins"</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-about">О клубе "Adrenalins"</a></li>
+                {% endif %}
+                {% if(sub == 'club-pilots') %}
+                    <li class="current"><span>Пилоты клуба</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-pilots">Пилоты клуба</a></li>
+                {% endif %}
+                {% if(sub == 'club-calendar') %}
+                    <li class="current"><span>Календарь событий</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-calendar">Календарь событий</a></li>
+                {% endif %}
+                {% if(sub == 'club-places') %}
+                    <li class="current"><span>Места, где мы летаем</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-places">Места, где мы летаем</a></li>
+                {% endif %}
+                {% if(sub == 'club-rules') %}
+                    <li class="current"><span>Правила полетов</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-rules">Правила полетов</a></li>
+                {% endif %}
+                {% if(sub == 'club-links') %}
+                    <li class="current"><span>Линки</span></li>
+                    {% else %}
+                    <li><a href="?page=club&sub=club-links">Линки</a></li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% endblock submenu %}
+        {% block eventCalendar %}
+            {% include "include/section-upcoming-events.twig" %}
+        {% endblock eventCalendar %}
+        </div>
+    </div>
+    <div class="right-wide-column add30v">
+     {% block mainContent %}{% endblock mainContent %}
+    </div>
+</div>
+{% endblock contentArea %}

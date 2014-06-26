@@ -1,0 +1,178 @@
+{% extends "base.twig" %}
+
+{% block pageTitle %}Contacts / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block slides %}
+<div class="slides inner">
+    <div class="slide-tandem current">
+        <div class="text clearfix">
+            <div class="promo"><h2>Fell free to contact us! Intro text goes here&hellip;</h2></div>
+
+            <div class="promo-form contacts">
+                <div class="">
+                    <form method="post" action="#">
+                        <input type="text" name="name" maxlength="50" placeholder="Vārds, Uzvārds" required="required">
+                        <input type="text" name="email" maxlength="50" placeholder="E-pasta adrese" required="required">
+                        <textarea rows="3" name="question" placeholder="Jūsu jautājums" required="required" autofocus="autofocus" maxlength="500"></textarea>
+                        <div class="clearfix capcha-container">
+                            <label for="capcha">2 + 7 =</label>
+                            <input type="text" id="capcha" name="capcha" maxlength="4" placeholder="" class="capcha">
+                        </div>
+                        <div class="button wide"><input type="submit" name="submit" value="Send message" class="submit-form"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock slides %}
+{% block contentArea %}
+<div class="content-area has-background">
+    <div class="only-column add30v">
+     {% block mainContent %}
+            <div class="article-heading-container">
+                <h2 class="article-parent">Don't hesitate to levitate</h2>
+                <h1 class="article-heading">Contact us</h1>                
+            </div>
+
+            <div>
+                <h4>Mūsu jinstruktori</h4>
+                <blockquote><p>Docendi lucilius invenire per ei, has ex vidit idque scriptorem. An wisi debitis lobortis has, ei vis omnium equidem. Iuvaret recteque efficiendi vix id, ad ius fugit persius praesent. Integre dissentiunt his ex.</p></blockquote>
+                <ul class="pilot-list add20t">
+                    <li>
+                        <div class="pilot-data">
+                            <a class="bigger" id="pilot-1" name="pilot-1">Mihails Vavilovs</a>
+                            <div class="small lighter uppercase add10b">Instruktors</div>
+                            <div class="smaller add10b"><span class="lighter">+371</span> 29119899<br /><a href="mailto:mihail@adrenalins.lv">mihail@adrenalins.lv</a></div>
+                        </div>
+
+                        <div class="pilot-picture has-icons">
+                            <div class="avatar size-140">
+                                <img src="img/140x140/1.jpg" />
+                                <div class="his-data">
+                                    <a href="#his-photos" class="hastip" title="Photogalleries | 13"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.7 5.738l-1.637-4.509c-.121-.333-.476-.509-.791-.394l-10.878 3.97c-.316.114-.475.478-.354.81l1.726 4.754v-2.548c0-1.15.918-2.084 2.049-2.084h2.874l3.428-2.406 1.984 2.406h1.599zm1.69 1.444h-11.576c-.336 0-.61.287-.61.642v7.537c0 .354.273.642.61.642h11.576c.337 0 .61-.287.61-.642v-7.538c0-.354-.273-.641-.61-.641zm-.883 7.216h-9.596v-1.375l1.476-3.436 2.215 2.75 2.078-2.13 2.671-.964 1.156 2.578v2.578z"/></svg></a>
+                                    <a href="#his-videos" class="hastip" title="Video | 2"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15.33 4.501c-2.243-.321-4.723-.501-7.33-.501s-5.087.18-7.331.501c-.43 1.684-.669 3.544-.669 5.499s.239 3.814.669 5.498c2.244.324 4.724.502 7.331.502s5.087-.178 7.33-.502c.431-1.684.67-3.543.67-5.498s-.239-3.815-.67-5.499zm-9.33 8.499v-6l5 3-5 3z"/></svg></a>
+                                    <a href="#his-news" class="hastip" title="News | 23"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12 .8h-8c-.88 0-1.6.72-1.6 1.6v11.2c0 .88.72 1.6 1.6 1.6h8c.88 0 1.6-.72 1.6-1.6v-11.2c0-.88-.72-1.6-1.6-1.6zm-7.35 3.335h6.7v1.4h-6.7v-1.4zm6.7 7.681h-6.7v-1.4h6.7v1.4zm.019-3.12h-6.7v-1.44h6.7v1.44z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pilot-details">
+                            <div class="clearfix"><div class="he-says">Превратил хобби в работу&hellip;</div></div>
+                            <div class="smaller"><span class="smaller lighter">Flying with:</span><br />Advance Omega 8, Axis Polaris</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pilot-data">
+                            <a class="bigger" id="pilot-2" name="pilot-2">Krišjānis Sietiņš</a>
+                            <div class="small lighter uppercase add10b">Instruktors</div>
+                            <div class="smaller add10b"><span class="lighter">+371</span> 29339713<br /><a href="mailto:krisjanis.sietins@gmail.com">krisjanis.sietins@gmail.com</a></div>
+                        </div>
+
+                        <div class="pilot-picture has-icons">
+                            <div class="avatar size-140">
+                                <img src="img/140x140/2.jpg" />
+                                <div class="his-data">
+                                    <a href="#his-photos" class="hastip" title="Photogalleries | 13"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.7 5.738l-1.637-4.509c-.121-.333-.476-.509-.791-.394l-10.878 3.97c-.316.114-.475.478-.354.81l1.726 4.754v-2.548c0-1.15.918-2.084 2.049-2.084h2.874l3.428-2.406 1.984 2.406h1.599zm1.69 1.444h-11.576c-.336 0-.61.287-.61.642v7.537c0 .354.273.642.61.642h11.576c.337 0 .61-.287.61-.642v-7.538c0-.354-.273-.641-.61-.641zm-.883 7.216h-9.596v-1.375l1.476-3.436 2.215 2.75 2.078-2.13 2.671-.964 1.156 2.578v2.578z"/></svg></a>
+                                    <a href="#his-videos" class="hastip" title="Video | 2"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15.33 4.501c-2.243-.321-4.723-.501-7.33-.501s-5.087.18-7.331.501c-.43 1.684-.669 3.544-.669 5.499s.239 3.814.669 5.498c2.244.324 4.724.502 7.331.502s5.087-.178 7.33-.502c.431-1.684.67-3.543.67-5.498s-.239-3.815-.67-5.499zm-9.33 8.499v-6l5 3-5 3z"/></svg></a>
+                                    <a href="#his-news" class="hastip" title="News | 23"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12 .8h-8c-.88 0-1.6.72-1.6 1.6v11.2c0 .88.72 1.6 1.6 1.6h8c.88 0 1.6-.72 1.6-1.6v-11.2c0-.88-.72-1.6-1.6-1.6zm-7.35 3.335h6.7v1.4h-6.7v-1.4zm6.7 7.681h-6.7v-1.4h6.7v1.4zm.019-3.12h-6.7v-1.44h6.7v1.44z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pilot-details">
+                            <div class="clearfix"><div class="he-says">Palīdzu cilvēkiem būt debesīs</div></div>
+                            <div class="smaller"><span class="smaller lighter">Flying with:</span><br />Advance Sigma 6, Paramania GT, H&E PARAMOTORES</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pilot-data">
+                            <a class="bigger" id="pilot-3" name="pilot-3">Dzintars Reiniks</a>
+                            <div class="small lighter uppercase add10b">Tandem pilots</div>
+                            <div class="smaller add10b"><span class="lighter">+371</span> 29345513<br /><a href="mailto:dzintars@adrenalins.lv">dzintars@adrenalins.lv</a></div>
+                        </div>
+
+                        <div class="pilot-picture has-icons">
+                            <div class="avatar size-140">
+                                <img src="img/140x140/3.jpg" />
+                                <div class="his-data">
+                                    <a href="#his-photos" class="hastip" title="Photogalleries | 13"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.7 5.738l-1.637-4.509c-.121-.333-.476-.509-.791-.394l-10.878 3.97c-.316.114-.475.478-.354.81l1.726 4.754v-2.548c0-1.15.918-2.084 2.049-2.084h2.874l3.428-2.406 1.984 2.406h1.599zm1.69 1.444h-11.576c-.336 0-.61.287-.61.642v7.537c0 .354.273.642.61.642h11.576c.337 0 .61-.287.61-.642v-7.538c0-.354-.273-.641-.61-.641zm-.883 7.216h-9.596v-1.375l1.476-3.436 2.215 2.75 2.078-2.13 2.671-.964 1.156 2.578v2.578z"/></svg></a>
+                                    <!-- <a href="#his-videos" class="hastip" title="Video | 2"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15.33 4.501c-2.243-.321-4.723-.501-7.33-.501s-5.087.18-7.331.501c-.43 1.684-.669 3.544-.669 5.499s.239 3.814.669 5.498c2.244.324 4.724.502 7.331.502s5.087-.178 7.33-.502c.431-1.684.67-3.543.67-5.498s-.239-3.815-.67-5.499zm-9.33 8.499v-6l5 3-5 3z"/></svg></a>-->
+                                    <a href="#his-news" class="hastip" title="News | 23"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M12 .8h-8c-.88 0-1.6.72-1.6 1.6v11.2c0 .88.72 1.6 1.6 1.6h8c.88 0 1.6-.72 1.6-1.6v-11.2c0-.88-.72-1.6-1.6-1.6zm-7.35 3.335h6.7v1.4h-6.7v-1.4zm6.7 7.681h-6.7v-1.4h6.7v1.4zm.019-3.12h-6.7v-1.44h6.7v1.44z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pilot-details">
+                            <!-- <div class="clearfix"><div class="he-says">Palīdzu cilvēkiem būt debesīs</div></div> -->
+                            <div class="smaller"><span class="smaller lighter">Flying with:</span><br />U-Turn U2</div>
+                        </div>
+                    </li>
+                </ul>                
+
+                <h4>Skolas atrašanas vieta</h4>
+                <div id="map-canvas"></div>
+            </div>
+
+{% endblock mainContent %}
+        </div>
+    </div>
+{% endblock contentArea %}
+{% block mapScripts %}
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC8wSJSGkjnodOgN6xsf9y95ljtj6K6da8&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(56.8912838, 24.2158561),
+            zoom: 12,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: true,
+            panControl: false,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Rumbula', 'Description of the marker', 56.88851838952163, 24.212756752967834]
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+            marker = new google.maps.Marker({
+                icon: 'http://www.kalichava.lv/adrenalins/img/solid-pin-red.png',
+                position: new google.maps.LatLng(locations[i][2], locations[i][3]),
+                map: map,
+                title: locations[i][0],
+                desc: description
+            });
+        }
+  google.maps.event.addListener(marker, 'click', function() {
+            var html= "<div style='color:#000;background-color:#fff;padding:5px;width:150px;'><p>"+this.desc+"<p></div>";
+            iw = new google.maps.InfoWindow({content:html});
+            iw.open(map,marker);
+        });
+    }
+</script>
+{% endblock %}

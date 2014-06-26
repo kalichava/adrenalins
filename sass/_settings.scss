@@ -1,0 +1,48 @@
+// Define breakpoints
+@import "neat/neat-helpers";
+$m1280: new-breakpoint(max-width 1280px);
+$m1000: new-breakpoint(max-width 1000px);
+$m900: new-breakpoint(max-width 900px);
+$m800: new-breakpoint(max-width 800px);
+$m700: new-breakpoint(max-width 700px);
+$m600: new-breakpoint(max-width 600px);
+$m500: new-breakpoint(max-width 500px);
+
+// Font Weights
+$font-weight-bold-serif: 700;
+$font-weight-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+// Font Colours
+$body-font-color: #444444 !default;
+$body-link-color: #d04526 !default;
+$body-link-hover-color: #c03d20 !default;
+
+// Font Families
+$font-family: "Open Sans";
+$font-family-serif: "Roboto Slab";
+
+// Colours
+$black: #111;
+$white: #fff;
+$body-color: #f1f1f1;
+
+$primary-color: #ffcd00;
+$secondary-color: #3570b1;
+$default-color: #f2f2f2;
+$info-color: #255386;
+$danger-color: #ca3838;
+$warning-color: #f6b83f;
+$success-color: #58c026;
+
+$primary-hover-color: lighten($primary-color, 16%);
+$secondary-hover-color: lighten($secondary-color, 16%);
+$default-hover-color:  lighten($default-color, 16%);
+$info-hover-color:  darken($info-color, 5%);
+$danger-hover-color:  lighten($danger-color, 16%);
+$warning-hover-color:  lighten($warning-color, 16%);
+$success-hover-color:  lighten($success-color, 16%);
+
+$line-color: #ddd !default;
+$border-radius: 3px;

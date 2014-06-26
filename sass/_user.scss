@@ -1,0 +1,31 @@
+.added-videos {
+    td {
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    td .lighter {
+        color:rgba(0,0,0,0);
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 1px;
+        position:relative;
+        top:3px;
+    }
+    td:hover .lighter {
+        color:lighten($body-font-color, 20%);
+    }
+    td .lighter:hover {
+        color:$body-link-color;
+    }
+}
+.add-new-pg {
+    position:absolute;
+    bottom:10px;
+    right:-40px;
+    width:35px;
+    height:35px;
+    fill:rgba($black, .4);
+    &:hover {
+        fill:rgba($body-link-color, 1);
+    }
+}

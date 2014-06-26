@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block pageTitle %}Video / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block contentArea %}
+<div class="content-area clearfix add20b">
+    <div class="clearfix">
+        <div class="right-wide-column tabs-container">
+            <ul class="tabs float-left">
+                <li><div class="button"><a href="?page=media&sub=photo">photo</a></div></li><li class="current"><div class="button"><a href="?page=media&sub=video">video</a></div></li><li><div class="button"><a href="?page=media&sub=aerophoto">aerophoto</a></div></li>
+            </ul>
+            <ul class="tabs outlines float-right">
+                <li class="current"><div class="button"><a href="?page=media">by date</a></div></li><li><div class="button"><a href="?page=media">by location<!-- тут будет селект --></a></div></li><li><div class="button"><a href="?page=media">by name</a></div></li>
+            </ul>                
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    {% block mainContent %}
+        <ul class="video-list">
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/0NY7QBtfz64?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/o6HmpOzfIMc?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/kZpoG5CE56Y?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="360" src="//player.vimeo.com/video/98861259?title=0&byline=0&amp;portrait=0&amp;badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/0NY7QBtfz64?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/o6HmpOzfIMc?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/kZpoG5CE56Y?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="360" src="//player.vimeo.com/video/98861259?title=0&byline=0&amp;portrait=0&amp;badge=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/0NY7QBtfz64?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+            <li><div class="video-container"><iframe width="640" height="390" src="//www.youtube.com/embed/o6HmpOzfIMc?rel=0&modestbranding=0&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></li>
+        </ul>
+        <div class="button at-center"><a href="?page=media&sub=video">load more videos</a></div>
+    {% endblock mainContent %}
+</div>
+{% endblock contentArea %}

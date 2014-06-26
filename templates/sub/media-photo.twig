@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block pageTitle %}Media / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block contentArea %}
+<div class="content-area clearfix add20b">
+    <div class="clearfix">
+        <div class="right-wide-column tabs-container">
+            <ul class="tabs float-left">
+                <li class="current"><div class="button"><a href="?page=media&sub=photo">photo</a></div></li><li><div class="button"><a href="?page=media&sub=video">video</a></div></li><li><div class="button"><a href="?page=media&sub=aerophoto">aerophoto</a></div></li>
+            </ul>
+            <ul class="tabs outlines float-right">
+                <li class="current"><div class="button"><a href="?page=media">by date</a></div></li><li><div class="button"><a href="?page=media">by location<!-- тут будет селект --></a></div></li><li><div class="button"><a href="?page=media">by name</a></div></li>
+            </ul>                
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    {% block mainContent %}
+        {% include 'include/photogalleries.twig' %}
+    {% endblock mainContent %}
+</div>
+{% endblock contentArea %}

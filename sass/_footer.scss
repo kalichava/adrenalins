@@ -1,0 +1,62 @@
+footer {
+    position:relative;
+    background: rgba(0,0,0,.66);
+    padding:15px 30px;
+    margin-top: 30px;
+    color:#fff;
+    z-index:11;
+    a, .search-link, .online {
+        display:inline-block;
+        font-size:.8125em;
+        float:left;
+        line-height: 1.5em;
+        color:rgba(white,.7);
+        @include transition(all 0.3s ease-in-out);
+    }
+    svg {
+        fill:rgba(white,.7);
+        @include transition(all 0.3s ease-in-out);
+        margin:0 10px;
+        vertical-align: middle;
+    }
+    a:hover {
+        color:white;
+        svg {
+            fill:white;
+        }
+    }
+    .online {
+        a {
+            float:none;
+            font-size:1em;
+        }
+        .badge {
+            color:#555;
+            background:#fff;
+            background:rgba(white, .7);
+            margin:0px 5px;
+        }
+        &:hover .badge {
+            background:#fff;
+        }
+    }
+}
+
+.white-link {
+    margin:0px 10px;
+    border-bottom:1px solid rgba(white,0.2);    
+    &:hover {
+        border-bottom:1px solid rgba(white,0.8);
+    }
+}
+.made-by-kalichava {
+    color:rgba(white,.5);
+    float:right;
+    @include media($m700) {
+        float:left;
+        clear:both;
+        margin-top:10px;
+    }
+    
+}
+

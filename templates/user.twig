@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+{% block pageTitle %}Name Surname / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+    <div class="slide-container" style="background: url({{background}})">
+        <div class="solid-color"></div>
+        <div class="gradient"></div>
+    </div>
+{% endblock slideContainer %}
+{% block contentArea %}
+    <div class="content-area">
+        <div class="button back"><a href="#go-back"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.52 13.934c.213.217.213.566 0 .783-.215.217-.562.217-.775 0l-6.265-6.326c-.214-.217-.214-.567 0-.783l6.264-6.326c.214-.217.561-.217.775 0 .213.217.213.566 0 .783l-5.712 5.934 5.713 5.935z"/></svg></a></div>
+        <div class="has-background clearfix">
+            <div class="only-column add30v">{% block mainContent %}{% endblock mainContent %}</div>
+        </div>
+    </div>
+{% endblock contentArea %}

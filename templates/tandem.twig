@@ -1,0 +1,103 @@
+{% extends "base.twig" %}
+{% block pageTitle %}Tandem Flights{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block slides %}
+<div class="slides inner">
+    <div class="slide-tandem current">
+        <div class="text clearfix">
+            <div class="promo"><h2>Укажите, где вы хотите полетать и мы вас проинформируем.</h2></div>
+            <form method="post" action="#" class="promo-form{% if(mod == 'error') %} error{% endif %}">
+                <input type="text" name="name" maxlength="50" autofocus="autofocus" placeholder="Vārds, Uzvārds" required="required"{% if(mod == 'error') %} class="has-mistake"{% endif %} />
+                <input type="text" name="email" maxlength="50" placeholder="E-pasta adrese" required="required"{% if(mod == 'error') %} class="has-mistake"{% endif %} />
+                <select name="place">
+                    <option>Rīga (Rumbula)</option>
+                    <option>Jurkalne</option>
+                    <option>Jēkabpils</option>
+                </select>
+                <div class="clearfix capcha-container">
+                    <label for="capcha">2 + 7 =</label>
+                    <input type="text" id="capcha" name="capcha" maxlength="4" class="capcha{% if(mod == 'error') %} has-mistake{% endif %}" required="required" />
+                </div>
+                <div class="button wide"><input type="submit" name="submit" value="Send request" class="submit-form"></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock slides %}
+{% block contentArea %}
+
+<div class="content-area has-background">
+    <div class="left-narrow-column">
+        <div class="sticky" id="sticky-left-column">
+            <section>
+                <div class="center"><span class="section-heading">Where to buy gift card?</span></div>
+                <div class="partners">
+                    <ul>
+                        <li><a href="#"><img src="img/partners/davanuserviss.jpg"></a></li>
+                        <li><a href="#"><img src="img/partners/fromme.jpg"></a></li>
+                        <li><a href="#"><img src="img/partners/bilesuserviss.jpg"></a></li>
+                    </ul>
+                    <p>Vai <a href="#">uz vietas</a> lorem ipsum dolor sit amet, consectetur adipisicing elit tempor incididunt ut labore.</p>
+                    <h2><span class="minor">(+371)</span> 255 47 550</h2><br>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="right-wide-column add30v">
+        <article>
+            <h2 class="article-parent">Tandem flights</h2>
+            <h1 class="article-heading">Nāc izbaudi brīvo lidojumu!</h1>
+
+            <object>
+                <figure>
+                    <iframe width="100%" src="//www.youtube.com/embed/o6HmpOzfIMc?rel=0&modestbranding=1&theme=light&showinfo=0&autohide=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <figcaption><a href="#photogallery">Akrobātiskais lidojums tandēmā ar paraplānu</a></figcaption>
+                </figure>
+            </object>
+
+            <h4>Kas tas ir un kā tas notiek?</h4>
+            <p><a href="img/tandems/10.jpg" class="imagelightbox">Sample link to photogallery</a>. Pasažiera krēsls un pilota iekares sistēma ir savienoti vienā veselā. Tandēma paraplāna laukums ir pietiekami liels, lai paceltu gaisā pilotu ar pasažieri, kura svars ir līdz 130kg. Startējot, paraplāns guļ izklāts aizmugurē uz zemes. Pilotu un pasažieri piekabina pie vinčas auklas un ar mašīnas, kas ekipēta ar speciālu vinču, palīdzību ievelk tandēmu līdz 450m augstumam. Pasažierim startā vajag paskriet 10m. Gaisā, kad sasniegts pietiekams augstums, pilots atvieno trosi un jūs kopā planējat brīvajā lidojumā augstu virs zemes. Lidojuma ilgst apmēram 6-15 minūtes (atkarībā no laika apstākļiem).</p>
+
+            <object>
+                <figure>
+                    <iframe width="100%" height="169" src="//player.vimeo.com/video/34675448?color=000000&badge=0&byline=0&portrait=0&title=0&player_id=MainpagePlayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <figcaption><a href="#photogallery">Mierīgs lidojums tandēmā ar paraplānu</a></figcaption>
+                </figure>
+            </object>
+
+
+            <h4>Kur un kad tas notiek?</h4>
+            <p><a href="#">Rumbulas lidlauks</a>: darba dienu vakaros un brīvdienās no aprīļa līdz septembrim. Brīvdienās no oktobra līdz martam.</p>
+            <p><a href="#">Krustpils lidlauks</a>: sestdienās un svētdienās, kad klubs dodas izbraukumā uz Krustpili. Ja ir termālie apstākļi, tad lidojums var ilgt pat vairākas stundas.</p>
+            <p><a href="#">Jūrkalnes stāvkrasts</a>: tur notiek lidojums dibamiskajās plūsmās virs stāvkrasta 10-40m augstumā gar jūras krastu. Lidot var stundām ilgi, kamēr ir pareizais vējš.</p>
+            <p>Kartes īpašniekam, pirms viņš vēlas lidot, ir jāsazvana mūs 1 dienu iepriekš pa telefonu 29119899 vai jāievada sava e-pasta adrese www.adrenalins.lv sadaļā "Lidojumi Tandēmā". Uz e-pastu nāks informācija kur un kad var izlidot ar instruktoru. Labākais laiks, kad lidot, ir pavasarī, vasarā un rudenī. Lidojumi notiek arī ziemā, bet retāk.</p>
+
+            <h4>Cik maksā?</h4>
+            <blockquote><p>Viens lidojums maksā 40 Eur. Dāvanu karte lidojumam ar instruktoru maksā 40 Eur. Tā ir derīga uz gadu un tur var izvēlēties, lidot mierīgi vai ar galvu reibinošiem trikiem.</p></blockquote>
+
+            <h4>Kā ģērbties?</h4>
+            <p>Vienīgais nosacījums ir tas, ka apģērbam jābūt brīvam un ar garām piedurknēm. Apaviem jābūt bez augstā papēža, un tiem stingri jāturas kājās!</p>                                        
+        </article>
+        {% include "include/photogallery.twig" %}
+    </div>
+</div>
+{% endblock contentArea %}
+
+{% block errorScripts %}
+{% if(mod == 'error') %}
+<script>
+    $.magnificPopup.open({
+        items: {
+            src: '<div class="white-popup center">Please, check data for errors</div>',
+            type: 'inline'
+        },
+        showCloseBtn: false
+    });
+    </script>
+{% endif %}
+{% endblock %}

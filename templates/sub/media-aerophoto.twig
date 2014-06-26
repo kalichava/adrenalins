@@ -1,0 +1,56 @@
+{% extends "base.twig" %}
+
+{% block pageTitle %}Aerofoto / Paragliding club and school{% endblock %}
+{% block slideContainer %}
+<div class="slide-container" style="background: url({{background}})">
+    <div class="solid-color"></div>
+    <div class="gradient"></div>
+</div>
+{% endblock  %}
+{% block contentArea %}
+<div class="content-area clearfix add20b">
+    <div class="clearfix">
+        <div class="right-wide-column tabs-container">
+            <ul class="tabs float-left">
+                <li><div class="button"><a href="?page=media&sub=photo">photo</a></div></li><li><div class="button"><a href="?page=media&sub=video">video</a></div></li><li class="current"><div class="button"><a href="?page=media&sub=aerophoto">aerophoto</a></div></li>
+            </ul>
+            <ul class="tabs outlines float-right">
+                <li class="current"><div class="button"><a href="?page=media">by date</a></div></li><li><div class="button"><a href="?page=media">by location<!-- тут будет селект --></a></div></li><li><div class="button"><a href="?page=media">by name</a></div></li>
+            </ul>                
+        </div>
+    </div>
+</div>
+
+<div class="content-area">
+    {% block mainContent %}
+        <div class="clearfix mosaicflow aerophoto photogallery-list" data-min-item-width="300" data-item-height-calculation="attribute">
+            <a href="img/570/gallery-1.jpg" class="mosaicflow__item"><img src="img/570/gallery-1.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-2.jpg" class="mosaicflow__item"><img src="img/570/gallery-2.jpg" width="570" height="321" /></a>
+            <a href="img/570/gallery-3.jpg" class="mosaicflow__item"><img src="img/570/gallery-3.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-4.jpg" class="mosaicflow__item"><img src="img/570/gallery-4.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-5.jpg" class="mosaicflow__item"><img src="img/570/gallery-5.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-6.jpg" class="mosaicflow__item"><img src="img/570/gallery-6.jpg" width="570" height="428" /></a>	
+            <a href="img/570/gallery-7.jpg" class="mosaicflow__item"><img src="img/570/gallery-7.jpg" width="570" height="377" /></a>
+            <a href="img/570/gallery-8.jpg" class="mosaicflow__item"><img src="img/570/gallery-8.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-9.jpg" class="mosaicflow__item"><img src="img/570/gallery-9.jpg" width="570" height="428" /></a>
+            <a href="img/570/gallery-10.jpg" class="mosaicflow__item"><img src="img/570/gallery-10.jpg" width="570" height="319" /></a>
+            <a href="img/570/gallery-1.jpg" class="mosaicflow__item"><img src="img/570/gallery-1.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-2.jpg" class="mosaicflow__item"><img src="img/570/gallery-2.jpg" width="570" height="321" /></a>
+            <a href="img/570/gallery-3.jpg" class="mosaicflow__item"><img src="img/570/gallery-3.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-4.jpg" class="mosaicflow__item"><img src="img/570/gallery-4.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-5.jpg" class="mosaicflow__item"><img src="img/570/gallery-5.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-6.jpg" class="mosaicflow__item"><img src="img/570/gallery-6.jpg" width="570" height="428" /></a>	
+            <a href="img/570/gallery-7.jpg" class="mosaicflow__item"><img src="img/570/gallery-7.jpg" width="570" height="377" /></a>
+            <a href="img/570/gallery-8.jpg" class="mosaicflow__item"><img src="img/570/gallery-8.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-9.jpg" class="mosaicflow__item"><img src="img/570/gallery-9.jpg" width="570" height="428" /></a>
+            <a href="img/570/gallery-10.jpg" class="mosaicflow__item"><img src="img/570/gallery-10.jpg" width="570" height="319" /></a>
+            <a href="img/570/gallery-1.jpg" class="mosaicflow__item"><img src="img/570/gallery-1.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-2.jpg" class="mosaicflow__item"><img src="img/570/gallery-2.jpg" width="570" height="321" /></a>
+            <a href="img/570/gallery-3.jpg" class="mosaicflow__item"><img src="img/570/gallery-3.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-4.jpg" class="mosaicflow__item"><img src="img/570/gallery-4.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-5.jpg" class="mosaicflow__item"><img src="img/570/gallery-5.jpg" width="570" height="380" /></a>
+            <a href="img/570/gallery-6.jpg" class="mosaicflow__item"><img src="img/570/gallery-6.jpg" width="570" height="428" /></a>	
+        </div>        
+    {% endblock mainContent %}
+    </div>
+{% endblock contentArea %}
