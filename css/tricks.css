@@ -1,0 +1,28 @@
+header {
+    -moz-animation-name: dropHeader;
+    -moz-animation-iteration-count: once;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.3s;
+
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-iteration-count: once;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.3s;
+}
+
+@-moz-keyframes dropHeader {
+    0% {
+        top: -40px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        top: -40px;
+    }
+    100% {
+        top: 0;
+    }
+}
